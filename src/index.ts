@@ -2,6 +2,7 @@ import type { Page } from "puppeteer-core";
 
 export * from "./date.js";
 export * from "./image.js";
+export * from "./kana/index.js";
 
 export async function selectTextContent(page: Page, selector: string): Promise<string> {
   const selected = await page.locator(selector).map(ele => ele.textContent).wait();
