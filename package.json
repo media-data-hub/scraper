@@ -9,7 +9,7 @@
     "prebuild": "rimraf dist",
     "build": "tsc",
     "lint": "eslint src",
-    "test": "echo 'No tests'"
+    "test": "mocha"
   },
   "keywords": [],
   "author": "Joshua Avalon",
