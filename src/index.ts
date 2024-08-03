@@ -11,6 +11,14 @@ export async function selectTextContent(page: Page, selector: string): Promise<s
   return selected;
 }
 
+export async function selectInnerText(page: Page, selector: string): Promise<string> {
+  const selected = await page.locator(selector).map(ele => (ele as HTMLElement).innerText).wait();
+  if (!selected) {
+    throw new Error("Cannot select title");
+  }
+  return selected;
+}
+
 export function formatTitle(text: string): string {
   return text
     .normalize("NFKC")

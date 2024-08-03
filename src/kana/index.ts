@@ -1,1 +1,1 @@
-export * from "./jcinfo.js";
+export { default as getJcinfoKana } from "./jcinfo.js";

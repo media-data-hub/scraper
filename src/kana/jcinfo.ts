@@ -1,7 +1,7 @@
 import type { Browser } from "puppeteer-core";
 
 
-export async function getKana(browser: Browser, text: string): Promise<string> {
+export default async function getKana(browser: Browser, text: string): Promise<string> {
   const page = await browser.newPage();
   try {
     await page.goto("https://www.jcinfo.net/ja/tools/kana");
