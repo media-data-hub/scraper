@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/media-data-hub/scraper/compare/v1.1.0...v1.2.0) (2024-08-03)
+
+
+### Features
+
+* export kana ([ac92e45](https://github.com/media-data-hub/scraper/commit/ac92e45f3acc474962210e85e00c7877c0bd5b45))
+
+
+### Bug Fixes
+
+* add tests ([20a762c](https://github.com/media-data-hub/scraper/commit/20a762ccdea77c0600b9f0fd4cd71c5b47122242))
+
 ## [1.1.0](https://github.com/media-data-hub/scraper/compare/v1.0.0...v1.1.0) (2024-08-03)
 
 
