@@ -8,9 +8,12 @@ export interface AirDateMapping {
 }
 
 export function createSelectAirDate(mapping: AirDateMapping, span = 7): (page: Page, epCurrent: number) => Promise<DateTime> {
-  const epNum = Object.keys(mapping).map(ep => Number.parseInt(ep)).filter(ep => ep <= 0);
+  const epNum = Object.keys(mapping).map(ep => Number.parseInt(ep)).filter(ep => ep > 0);
   return async (_page, epCurrent) => {
-    const nearestEp = epNum.reduce((prev, cur) => cur > prev && cur < epCurrent ? cur : prev, -1);
+    if (mapping[epCurrent]) {
+      return mapping[epCurrent];
+    }
+    const nearestEp = epNum.reduce((prev, cur) => cur > prev && cur <= epCurrent ? cur : prev, -1);
     if (nearestEp <= 0) {
       throw new Error(`Cannot find nearest episode number for air date (${epCurrent})`);
     }
