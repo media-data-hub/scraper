@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/media-data-hub/scraper/compare/v1.2.0...v1.2.1) (2024-08-04)
+
+
+### Bug Fixes
+
+* createSelectAirDate ([41d6d31](https://github.com/media-data-hub/scraper/commit/41d6d311fa6649d91d65e85ed87abbb49fb81eb4))
+
 ## [1.2.0](https://github.com/media-data-hub/scraper/compare/v1.1.0...v1.2.0) (2024-08-03)
 
 
