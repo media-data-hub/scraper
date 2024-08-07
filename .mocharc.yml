@@ -1,2 +1,3 @@
+timeout: 10000
 spec:
-  - ./dist/**/__tests__/*.spec.js
+  - ./dist/**/__tests__/**/*.spec.js

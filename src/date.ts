@@ -1,7 +1,7 @@
 import { DateTime } from "luxon";
 
 import type { DateObjectUnits } from "luxon";
-import type { Page } from "puppeteer-core";
+import type { Page } from "playwright";
 
 export interface AirDateMapping {
   [key: number]: DateTime;
@@ -24,7 +24,7 @@ export function createSelectAirDate(mapping: AirDateMapping, span = 7): (page: P
 // eslint-disable-next-line max-params
 export function selectRegexAirDate(selector: string, regex: RegExp, time: DateObjectUnits, zone = "utc"): (page: Page, epCurrent: number) => Promise<DateTime> {
   return async page => {
-    const selected = await page.locator(selector).map(ele => ele.textContent).wait();
+    const selected = await page.locator(selector, { hasText: regex }).textContent();
     if (!selected) {
       throw new Error("Cannot select airDate");
     }
