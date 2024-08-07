@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/media-data-hub/scraper/compare/v1.2.1...v2.0.0) (2024-08-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* replace puppeteer with playwright
+
+### Features
+
+* replace puppeteer with playwright ([eaccd61](https://github.com/media-data-hub/scraper/commit/eaccd6117d27f7654c9c51fd2a4ff9088c7ee064))
+
 ## [1.2.1](https://github.com/media-data-hub/scraper/compare/v1.2.0...v1.2.1) (2024-08-04)
 
 
