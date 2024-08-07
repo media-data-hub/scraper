@@ -2,7 +2,7 @@ import sharp from "sharp";
 import imageType from "image-type";
 
 import type { ImageTypeResult } from "image-type";
-import type { Browser } from "puppeteer-core";
+import type { Browser } from "playwright";
 
 export async function fetchImage(browser: Browser, url: string, referer?: string): Promise<Buffer> {
   const page = await browser.newPage();
@@ -14,7 +14,7 @@ export async function fetchImage(browser: Browser, url: string, referer?: string
     if (!viewSource) {
       throw new Error("Empty viewSource");
     }
-    return await viewSource.buffer();
+    return await viewSource.body();
   } finally {
     await page.close();
   }
